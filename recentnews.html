@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberjaya Recent News</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        li, a {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #140101;
+            text-decoration: none;
+            margin: 0;
+        }
+
+         /* Header and Navigation Styles */
+         header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content-section .slider {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .content-section .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .content-section .slide {
+            flex: 0 0 auto;
+            padding: 0 10px;
+            box-sizing: border-box;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 300px; /* Adjust the height as per your design */
+            margin-right: 10px; /* Added margin between slides */
+        }
+
+        .content-section .slide img {
+            max-width: 100%;
+            height: auto;
+            max-height: 100%; /* Ensure images maintain aspect ratio */
+            object-fit: cover; /* Cover ensures images fill their container */
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .content-section .slide:hover img {
+            transform: scale(1.05);
+        }
+
+        .content-section .slide .news-item {
+            position: absolute;
+            bottom: -100%; /* Move the description off-screen initially */
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            color: #fff;
+            text-align: left;
+            transition: bottom 0.3s ease;
+            opacity: 0.9; /* Adjust transparency for better readability */
+            z-index: 1; /* Ensure description stays above the image */
+        }
+
+        .content-section .slide:hover .news-item {
+            bottom: 0; /* Slide description up to be visible on hover */
+        }
+
+        .content-section .slide h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content-section .slide p {
+            font-size: 16px;
+            line-height: 1.5;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .slider-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 20px; /* Adjust font size for symbols */
+        }
+
+        .slider-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul>
+                        <li><a class="active" href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="sciencepark.html">Science Park</a></li>
+                <li><a href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="cyberjaya about.jfif" alt="Banner Image">
+        <div class="banner-text">Recent News About Cyberjaya </div>
+    </div>
+    
+    <div class="content-section">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="vehicle.jpg" alt="Autonomous Vehicle">
+                    <div class="news-item">
+                        <h3>Autonomous Vehicle Testing</h3>
+                        <p>Cyberjaya is paving the way for the future with the first autonomous vehicle testing routes in Malaysia. Spearheaded by Futurise and the Ministry of Transport, this initiative within the National Regulatory Sandbox is set to accelerate the country's autonomous vehicle industry.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="mrt.jpg" alt="New MRT Station">
+                    <div class="news-item">
+                        <h3>New MRT Station</h3>
+                        <p>Exciting developments are underway with the upcoming MRT station at Cyberjaya City Centre. This addition is poised to enhance connectivity, catering to the evolving transportation needs of our growing community.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="traffic.jpg" alt="Smart Traffic Management">
+                    <div class="news-item">
+                        <h3>Smart Traffic Management</h3>
+                        <p>Cyberjaya's streets are smarter than ever with the implementation of an AI-driven traffic management system. Utilizing IoT technologies, this system reduces congestion and enhances road safety by optimizing traffic flow in real-time.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="hub.jpg" alt="Cyberjaya Innovation Hub">
+                    <div class="news-item">
+                        <h3>Cyberjaya Innovation Hub</h3>
+                        <p>Welcome to the newly inaugurated Cyberjaya Innovation Hub! A collaborative space where entrepreneurs, researchers, and tech enthusiasts come together to push the boundaries of innovation. The hub offers state-of-the-art facilities to foster creativity and development.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="tech.jpg" alt="Tech Festival 2024">
+                    <div class="news-item">
+                        <h3>Tech Festival 2024</h3>
+                        <p>Mark your calendars for Tech Festival 2024! Cyberjaya will host this grand event, bringing together industry leaders, startups, and tech enthusiasts from around the globe. Experience keynote speeches, panel discussions, and exhibitions showcasing cutting-edge technology.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="green2.jpg" alt="Green Energy Initiatives">
+                    <div class="news-item">
+                        <h3>Green Energy Initiatives</h3>
+                        <p>Cyberjaya is going green! New initiatives are underway, including the installation of solar panels city-wide and the introduction of electric public transportation options, reinforcing our commitment to sustainability and reducing our carbon footprint.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider navigation buttons -->
+        <div class="slider-buttons">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for automatic slider
+        const slides = document.querySelectorAll('.slide');
+        const slider = document.querySelector('.slides');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+        const slideWidth = slides[currentSlide].clientWidth;
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds (5000 milliseconds)
+    </script>
+
+</body>
+</html>

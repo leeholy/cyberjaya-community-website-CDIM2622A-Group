@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Cyberjaya</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         /* General Styles */
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        a {
+            color: #140101;
+            text-decoration: none;
+        }
+
+        /* Header and Navigation Styles */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .faq {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            max-width: 1150px;
+        }
+        .faq details {
+            margin-bottom: 10px;
+        }
+        .faq details summary {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .faq details summary:hover {
+            color: #4FB6EC;
+        }
+
+        /* Footer Styles */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul>
+                        <li><a href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="sciencepark.html">Science Park</a></li>
+                <li><a href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a class="active" href="faq.html">FAQs</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="cyberjaya feedback.jfif" alt="Banner Image">
+        <div class="banner-text">Frequently Ask Questions</div>
+    </div>
+
+    <div class="faq">
+        <h2 style="color: blue;">Cyberjaya Lake Garden</h2>
+        <details>
+            <summary>What is Cyberjaya Lake Garden?</summary>
+            <p>Cyberjaya Lake Garden is a beautiful recreational park in Cyberjaya. It features a large lake, jogging and cycling tracks, playgrounds, picnic areas, and lush green landscapes, making it a perfect spot for relaxation and outdoor activities.</p>
+        </details>
+        <details>
+            <summary>Where is Cyberjaya Lake Garden located?</summary>
+            <p>Cyberjaya Lake Garden is located at Persiaran Semarak Api, Cyberjaya, 63000 Cyberjaya, Selangor, Malaysia.</p>
+        </details>
+        <details>
+            <summary>What are the operating hours of Cyberjaya Lake Garden?</summary>
+            <p>The park is open daily from 6:00 AM to 10:00 PM.</p>
+        </details>
+        <details>
+            <summary>Are there any facilities available at Cyberjaya Lake Garden?</summary>
+            <p>Yes, the park offers various facilities including restrooms, a food court, fitness equipment, and a children's playground.</p>
+        </details>
+        <details>
+            <summary>Are pets allowed at Cyberjaya Lake Garden?</summary>
+            <p>Yes, pets are allowed in Cyberjaya Lake Garden as long as they are on a leash and owners clean up after them. It's a great place for a walk with your furry friends.</p>
+        </details>
+    </div>
+
+    <div class="faq">
+        <h2 style="color: blue;">Tamarind Square</h2>
+        <details>
+            <summary>What is Tamarind Square?</summary>
+            <p>Tamarind Square is a retail and lifestyle destination in Cyberjaya, designed to be a communal space where nature meets urban convenience. It features a mix of retail shops, offices, cafes, and restaurants, all set within a green, open-air environment.</p>
+        </details>
+        <details>
+            <summary>Where is Tamarind Square located?</summary>
+            <p>Tamarind Square is located at Persiaran Multimedia, Cyberjaya, 63000 Cyberjaya, Selangor, Malaysia. It is easily accessible by car and public transportation.</p>
+        </details>
+        <details>
+            <summary>What are the operating hours of Tamarind Square?</summary>
+            <p>Most shops and eateries in Tamarind Square operate from 10:00 AM to 10:00 PM daily. However, specific operating hours may vary depending on individual tenants.</p>
+        </details>
+        <details>
+            <summary>Is there parking available at Tamarind Square?</summary>
+            <p>Yes, Tamarind Square offers ample parking spaces for visitors. There are both outdoor and basement parking options available.</p>
+        </details>
+        <details>
+            <summary>Is Tamarind Square wheelchair accessible?</summary>
+            <p>Yes, Tamarind Square is designed to be wheelchair accessible, with ramps and elevators available for easy navigation throughout the complex.</p>
+        </details>
+    </div>
+
+    <div class="faq">
+        <h2 style="color: blue;">DPulze Shopping Center</h2>
+        <details>
+            <summary>What is DPulze?</summary>
+            <p>DPulze is a popular shopping mall in Cyberjaya. It offers a wide range of retail stores, dining options, a cinema, entertainment outlets, and a hotel, making it a central hub for shopping and entertainment in the area.</p>
+        </details>
+        <details>
+            <summary>Where is DPulze located?</summary>
+            <p>DPulze is located at Lingkaran Cyber Point Timur, Cyberjaya, 63000 Cyberjaya, Selangor, Malaysia.</p>
+        </details>
+        <details>
+            <summary>What are the operating hours of DPulze?</summary>
+            <p>The mall is open daily from 10:00 AM to 10:00 PM.</p>
+        </details>
+        <details>
+            <summary>What can I find at DPulze?</summary>
+            <p>DPulze features a variety of retail shops, a food court, restaurants, a cinema, entertainment outlets, and a hotel. It also hosts events and promotions throughout the year.</p>
+        </details>
+        <details>
+            <summary>Is there a cinema at DPulze?</summary>
+            <p>Yes, DPulze has a cinema operated by TGV Cinemas, offering a wide range of movies for entertainment. Check their website for showtimes and bookings.</p>
+        </details>
+    </div>
+
+    <div class="faq">
+        <h2 style="color: blue;">Lorong Belakang Cyberjaya</h2>
+        <details>
+            <summary>What is Lorong Belakang Cyberjaya?</summary>
+            <p>Lorong Belakang Cyberjaya is a trendy alleyway in Cyberjaya known for its vibrant street art, unique cafes, and indie shops. It is a popular spot for photography, social gatherings, and exploring local culture.</p>
+        </details>
+        <details>
+            <summary>Where is Lorong Belakang Cyberjaya located?</summary>
+            <p>Lorong Belakang Cyberjaya is situated behind some of the main commercial buildings in Cyberjaya. It is a hidden gem that is best discovered by exploring the area on foot.</p>
+        </details>
+        <details>
+            <summary>What are the operating hours of Lorong Belakang Cyberjaya?</summary>
+            <p>The cafes and shops in Lorong Belakang have varying operating hours, but most are open from late morning until late evening.</p>
+        </details>
+        <details>
+            <summary>What can I do at Lorong Belakang Cyberjaya?</summary>
+        </details>
+        </div>
+ 
+        <footer class="footer">
+            <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+        </footer>
+     </body>
+     </html>

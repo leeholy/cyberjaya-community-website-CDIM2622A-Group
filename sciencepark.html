@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Park</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        li, a {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #140101;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        /* Header and Navigation Styles */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content-section {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 1150px;
+        }
+        .content-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 34px;
+            color: #140101;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .content-section p {
+            text-align: justify;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 18px;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.3s;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .facility {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .facility img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .facility-content {
+            text-align: center;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #11ffee;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul>
+                        <li><a href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a class="active" href="sciencepark.html">Science Park</a></li>
+                <li><a href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="cyberjaya sp.jfif" alt="Banner Image">
+        <div class="banner-text">Science Park</div>
+    </div>
+
+    <div class="content-section">
+
+        <!-- Company 1: Dell -->
+        <div class="facility multinational">
+            <div class="facility-content">
+                <h2>Dell Cyberjaya</h2>
+                <img class="image" src="dell.jpg" alt="Dell" onclick="openModal('modal1')">
+                <p>Located in the heart of Cyberjaya, Malaysia's technological powerhouse, Dell Cyberjaya is a strategically located facility for Dell Technologies. Dell has a number of departments operating out of Cyberjaya, including R&D, customer service, and administration. This facility plays a crucial role in Dell's global operations, leveraging Malaysia's highly skilled workforce and favorable business environment to drive innovation and customer service both locally and internationally.</p>
+                <p>Phone: 03-8310 1888</p>
+                <p>Address: 2900, Persiaran APEC, Cyberjaya, 63000 Cyberjaya, Selangor</p>
+                <a href="https://maps.app.goo.gl/WbzTpME3bTAznGR57" style="color: blue;">Click here to go there!</a>
+                <a href="https://www.dell.com/en-my/" style="color: blue;"> - Their Website - </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content-section">
+        <!-- Company 2: Tesla -->
+        <div class="facility multinational">
+            <div class="facility-content">
+                <h2>Tesla Malaysia</h2>
+                <img src="tesla.jpg" alt="Tesla" onclick="openModal('modal2')">
+                <p>Tesla Malaysia's head office, experience center, and service facility are located in Cyberjaya. Within just two months of construction, Tesla's Cyberjaya headquarters became the central hub for marketing, customer service, training, and corporate functions. It includes a service facility equipped with advanced diagnostic tools, skilled technicians, and a dedicated parts warehouse to support operations.</p>
+                <p>Opening Hours:</p>
+                <p>Monday to Friday: 9:00 am-6:00 pm</p>
+                <p>Saturday: 9:00 am-1:00 pm</p>
+                <p>Phone: 1 800 88 8388</p>
+                <p>Address: 63000 Cyberjaya, Selangor</p>
+                <a href="https://maps.app.goo.gl/eVc66efB5tZWmWiT7" style="color: blue;">Click here to go there!</a>
+                <a href="https://www.tesla.com/en_my/" style="color: blue;"> - Their Website - </a>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="content-section">
+            <!-- Company 3: TM -->
+            <div class="facility technology">
+                <div class="facility-content">
+                    <h2>Telekom Malaysia</h2>
+                    <img src="tm2.jpg" alt="TM" onclick="openModal('modal3')">
+                    <p>Within Malaysia's technological cluster, Telekom Malaysia Berhad (TM) in Cyberjaya is a prominent supplier of digital services and telecommunications. With an emphasis on a range of telecommunications services, including broadband internet, fixed-line telephone, and digital solutions for both enterprises and consumers, Cyberjaya acts as the hub for TM's activities. By providing services and infrastructure essential to Malaysia's connectivity and communications requirements in the digital era, TM's presence in Cyberjaya highlights its role in assisting the country's digital transformation.</p>
+                    <p> Opening Hours: </p>
+                    <p> Monday 8:30 am–5:30 pm<br>
+                        Tuesday	8:30 am–5:30 pm<br>
+                        Wednesday 8:30 am–5:30 pm<br>
+                        Thursday	8:30 am–5:30 pm<br>
+                        Friday	8:30 am–5:30 pm<br>
+                        Saturday	Closed<br>
+                        Sunday	Closed</p>
+                    <p>Phone: +603-8318 1130</p>
+                    <p>Address: 3300, Lingkaran Usahawan 1 Timur, Cyberjaya, 63000 Cyberjaya, Selangor</p>
+                    <a href="https://maps.app.goo.gl/ngR7yKuH6rLoPaFL8"style="color: blue;">Click here to go there!</a>
+                    <a href="https://www.tm.com.my/"style="color: blue;"> - Their Website - </a>
+                </div>
+            </div>
+
+        </div>
+    
+        <div class="content-section">
+            <!-- Company 4: Huawei -->
+            <div class="facility technology">
+                <div class="facility-content">
+                    <h2>Huawei Malaysia Global Training Centre (MGTC)</h2>
+                    <img src="huawei.jpg" alt="Huawei" onclick="openModal('modal4')">
+                    <p>China-based Huawei is a multinational technology business with a presence in Cyberjaya, Malaysia. Research and development (R&D), customer service, and maybe additional strategic roles like regional headquarters operations are the main areas of concentration for Huawei's Cyberjaya activities. Because of Cyberjaya's reputation as a centre of technology, Huawei can easily take advantage of Malaysia's infrastructure and trained labour force to support its global activities, especially in the fields of networking, consumer electronics, and telecommunications.</p>
+                    <p> Opening Hours: </p>
+                    <p>Monday 09:00 - 18:00<br>
+                        Tuesday 09:00 - 18:00<br>
+                        Wednesday 09:00 - 18:00<br>
+                        Thursday 09:00 - 18:00<br>
+                        Friday 09:00 - 18:00</p>
+                    <p>Phone: 03-8687 8800</p>
+                    <p>Address: 3501 Jalan Teknokrat 5, Cyberjaya, Malaysia</p>
+                    <a href="https://maps.app.goo.gl/tWTwueWSQhQ2o9KdA"style="color: blue;">Click here to go there!</a>
+                    <a href="https://www.huawei.com/my/"style="color: blue;"> - Their Website - </a>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="content-section">
+            <!-- Company 5: Astro -->
+            <div class="facility creative">
+                <div class="facility-content">
+                    <h2>Astro Cyberjaya Broadcast Centre</h2>
+                    <img src="astro.jpg" alt="Astro" onclick="openModal('modal5')">
+                    <p>Astro, a Cyberjaya-based company, leverages the city's prominent role as a centre for technology and digital innovation to provide top-notch media and entertainment services to its clientele in Malaysia and beyond.</p>
+                    <p> Opening Hours: </p>
+                    <p>Monday	9 am–6 pm<br>
+                        Tuesday	9 am–6 pm<br>
+                        Wednesday	9 am–6 pm<br>
+                        Thursday	9 am–6 pm<br>
+                        Friday	9 am–6 pm<br>
+                        Saturday	Closed<br>
+                        Sunday	Closed</p>
+                    <p>Address:  Jalan Teknokrat 1/2, Cyberjaya, 63000 Cyberjaya, Selangor</p>
+                    <a href="https://maps.app.goo.gl/v8RMqB9uUAetVD7G9"style="color: blue;">Click here to go there!</a>
+                    <a href="https://www.astro.com.my/"style="color: blue;"> - Their Website - </a>
+                </div>
+            </div>
+        </div>
+    
+
+    </div>
+
+    <!-- Modal for Dell Cyberjaya -->
+    <div id="modal1" class="modal">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <img class="modal-content" src="dell.jpg" alt="Dell Cyberjaya">
+    </div>
+
+    <!-- Modal for Tesla Malaysia -->
+    <div id="modal2" class="modal">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <img class="modal-content" src="tesla.jpg" alt="Tesla Malaysia">
+    </div>
+
+    <div id="modal3" class="modal">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <img class="modal-content" src="tm2.jpg" alt="TM">
+    </div>
+    
+    <div id="modal4" class="modal">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <img class="modal-content" src="huawei.jpg" alt="Huawei">
+    </div>
+    
+    <div id="modal5" class="modal">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <img class="modal-content" src="astro.jpg" alt="Astro">
+    </div>
+
+    <script>
+        // Function to open the modal
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+        }
+
+        // Function to close the modal
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+            document.body.style.overflow = ""; // Allow scrolling
+        }
+    </script>
+
+        <footer class="footer">
+            <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+        </footer>
+
+</body>
+</html>

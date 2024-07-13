@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Cyberjaya</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        li, a {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #140101;
+            text-decoration: none;
+            margin: 0;
+        }
+
+         /* Header and Navigation Styles */
+         header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content-section {
+            padding:20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 1150px;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 34px;
+            color: #140101;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-section p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .content-section img {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 100%;
+            max-height: 350px; /* Set a consistent max-height for all images */
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .history-section {
+            background-color: #cbffff;
+        }
+
+        .features-section {
+            background-color: #fff;
+        }
+
+        .community-section {
+            background-color: #cbffff;
+        }
+
+        .future-section {
+            background-color: #fff;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="about.html">About</a>
+                    <ul>
+                        <li><a href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="sciencepark.html">Science Park</a></li>
+                <li><a href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="banner">
+        <img src="cyberjaya about.jfif" alt="Banner Image">
+        <div class="banner-text">About Cyberjaya </div>
+    </div>
+
+    <div class="content-section history-section">
+        <h2>History</h2>
+        <img src="history.jpg" alt="Cyberjaya History Image">
+        <p>Cyberjaya emerged in the late 1990s as Malaysia's ambitious endeavor to pivot towards a knowledge-based economy. It was meticulously planned to attract global tech companies, startups, and innovators, with a clear vision to lead the nation's digital transformation.</p>
+        <p>Construction began in 1997, focusing on cutting-edge infrastructure within the Multimedia Super Corridor (MSC), strategically positioning Cyberjaya as a hub for Southeast Asia's tech industry. Over the years, it has drawn multinational corporations, startups, and research institutions, becoming a dynamic center of innovation.</p>
+        <p>Cyberjaya reflects Malaysia's commitment to technological advancement, evolving rapidly to support its growing population and business community. Today, it hosts tech giants, universities, and startups, contributing to a vibrant ecosystem of innovation and growth.</p>
+        <p>From its first tech parks to smart city initiatives, Cyberjaya continues to redefine what a modern city can achieve, embodying Malaysia's aspirations for digital leadership and economic diversification.</p>
+        
+    </div>
+    
+
+    <div class="content-section features-section">
+        <h2>Key Features</h2>
+        <img src="key.jpg" alt="Cyberjaya Features Image">
+        <p>Cyberjaya is synonymous with state-of-the-art infrastructure and high-speed connectivity. The city boasts a plethora of research centers, universities, and innovation labs, all designed to foster creativity and development. With lush green spaces, advanced urban planning, and a myriad of recreational facilities, Cyberjaya is not just a place to work, but a place to thrive.</p>
+    </div>
+
+    <div class="content-section community-section">
+        <h2>Community and Lifestyle</h2>
+        <img src="community.jpg" alt="Cyberjaya Lifestyle Image">
+        <p>Diverse, vibrant, and welcoming—these are the hallmarks of Cyberjaya’s community. The city offers a harmonious blend of work, education, and leisure, ensuring a high quality of life. From bustling shopping malls and eclectic dining options to serene parks and sports complexes, Cyberjaya caters to every lifestyle need.</p>
+</div>
+
+<div class="content-section future-section">
+    <h2>Future Prospects</h2>
+    <img src="fp.jpg" alt="Cyberjaya Future Image">
+    <p>Looking ahead, Cyberjaya is set to remain a beacon of innovation and growth. The city’s future is anchored in its commitment to smart city initiatives, sustainability, and attracting global talent. As Cyberjaya continues to evolve, it promises to stay at the forefront of technological and economic advancements, driving Malaysia’s digital economy forward.</p>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+</div>
+
+</body>
+</html>

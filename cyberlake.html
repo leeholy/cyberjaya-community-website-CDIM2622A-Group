@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noosa Flashpackers</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        a {
+            color: #140101;
+            text-decoration: none;
+        }
+
+        /* Header and Navigation Styles */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Content Section Styles */
+        .content-section {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 1150px;
+        }
+        .content-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 34px;
+            color: #140101;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .content-section p {
+            text-align: center;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 18px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.3s;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .free-stuff {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .free-stuff .item {
+            text-align: center;
+        }
+
+        .home-away {
+            background-color: #fff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .home-away .videos {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .home-away .videos .video img {
+            width: 100px;
+            height: auto;
+        }
+
+        .images {
+            width:80%;
+            height: auto;
+        }
+
+        .video {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: auto; 
+            border-radius: 5px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul>
+                        <li><a href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a class="active"href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="sciencepark.html">Science Park</a></li>
+                <li><a href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="banner">
+            <img src="cyberjaya attraction.jfif" alt="Banner Image">
+            <div class="banner-text">Welcome to Cyberjaya Lake Garden</div>
+        </div>
+
+        <div class="content-section">
+            <h2>Beautiful Scenery at Cyberjaya Lake Garden!</h2>
+            <p>The Cyberjaya Lake Gardens are a dynamic and important piece of nature located in the centre of Cyberjaya. Nestled among scrublands, secondary woods, and oil palm plantations, this 400-acre park provides an essential green space for the adjacent metropolitan population.<p>
+            <section class="free-stuff">
+                <div class="item">
+                    <img class="images" src="sunset.png" alt="Sunset">
+                    <p>SUNSET</p>
+                </div>
+                <div class="item">
+                    <img class="images" src ="playground.png" alt="Playground">
+                    <p>PLAYGROUND</p>
+                </div>
+                <div class="item">
+                    <img class="images" src="walking.png" alt="Walking">
+                    <p>WALKING</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="content-section">
+            <h2>More Video About Cyberjaya Lake Garden!</h2>
+            <p>Although the region currently has a number of tourist amenities, such as a children's playground, boardwalk, lookout tower, and information centre, much of the property is still undeveloped, including a 29-acre natural wetland and a 15-acre main lake.<p>
+        <section class="home-away">
+            <div class="videos">
+                <div class="video">
+                    <iframe width="500" height="300" src="https://www.youtube.com/embed/Gjn2rhSuAHU?si=SAo5kAz3GgJf-7v7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe width="500" height="300" src="https://www.youtube.com/embed/9GHfCYimMZM?si=qMijVuxYx7H3wPN3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberjaya Local Community Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        a {
+            color: #140101;
+            text-decoration: none;
+        }
+
+        /* Header and Navigation Styles */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Content Section Styles */
+        .content-section {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 1150px;
+        }
+        .content-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 34px;
+            color: #140101;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .content-section p {
+            text-align: justify;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 18px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.3s;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        /* Highlights Section Styles */
+        .highlight {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .highlight-item {
+            text-align: center;
+            transition: transform 0.3s ease;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .highlight-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        .highlight-item h3 {
+            margin: 10px 0;
+            font-size: 26px;
+            color: #140101;
+        }
+        .highlight-item p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .highlight-item:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Footer Styles */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul>
+                        <li><a href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="sciencepark.html">Science Park</a></li>
+                <li><a href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="banner">
+        <img src="cyberjaya home.jfif" alt="Banner Image">
+        <div class="banner-text">Cyberjaya: The Heart of Innovation</div>
+    </div>
+
+    <div class="content-section">
+        <h2>Unveiling Cyberjaya</h2>
+        <p>Step into Cyberjaya, Malaysia's premier science park where cutting-edge technology converges with vibrant community life. Since its inception in 1997, Cyberjaya has rapidly evolved into a dynamic hub, fostering technological advancements, nurturing startups, and offering a perfect blend of work and play.</p>
+        
+        <p>Spanning over 7,000 acres and strategically located near Kuala Lumpur International Airport, Cyberjaya epitomizes Malaysia's vision of a knowledge-based economy. With top-notch IT infrastructure, modern amenities, and an eco-friendly design, it magnetizes tech companies and entrepreneurs from all corners of the globe.</p>
+        
+        <p>Designed with sustainability at its core, Cyberjaya boasts lush green spaces, serene parks, and picturesque lakes, offering a tranquil escape amid the bustling tech environment. The city's efficient public transportation, extensive broadband connectivity, and contemporary living and working spaces ensure a superior quality of life for all its inhabitants.</p>
+
+        <div class="highlight">
+            <div class="highlight-item">
+                <img src="transport.jpg" alt="Public Transportation">
+                <h3>Seamless Mobility</h3>
+                <p>Explore Cyberjaya with ease, thanks to its seamless and eco-friendly public transportation options.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="speed.jpg" alt="Broadband Connectivity">
+                <h3>Lightning-Fast Internet</h3>
+                <p>Stay connected with high-speed, reliable internet, ideal for tech enthusiasts and businesses alike.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="modern.jpg" alt="Modern Developments">
+                <h3>Contemporary Living</h3>
+                <p>Experience the best of modern living with our cutting-edge residential and commercial developments designed for comfort and efficiency.</p>
+            </div>
+        </div>
+
+        <p>Cyberjaya is more than just a tech hub, it's a vibrant community that celebrates creativity, education, and cultural exchange. The city hosts numerous events, conferences, and workshops, attracting industry leaders, innovators, and enthusiasts from around the world. With its unique blend of technology, sustainable living, and community spirit, Cyberjaya stands as a model for future smart cities.</p>
+
+        <div class="highlight">
+            <div class="highlight-item">
+                <img src="recreational.jpg" alt="Recreational Facilities">
+                <h3>Leisure and Recreation</h3>
+                <p>Delight in a variety of recreational facilities, from parks and lakes to sports complexes, perfect for relaxation and fitness.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="culture.jpg" alt="Cultural Events">
+                <h3>Vibrant Cultural Scene</h3>
+                <p>Immerse yourself in an array of cultural events that celebrate the rich heritage and vibrant spirit of our community.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="workshop.jpg" alt="Innovative Workshops">
+                <h3>Creative Workshops</h3>
+                <p>Join workshops and conferences that bring together brilliant minds to share ideas and drive innovation.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

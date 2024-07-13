@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar - Cyberjaya</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        a {
+            color: #140101;
+            text-decoration: none;
+        }
+
+        /* Header and Navigation Styles */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        .content-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            max-width: 1150px;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 28px;
+            color: #140101;
+        }
+
+        .event-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            min-width: 400px;
+        }
+
+        .event-table th,
+        .event-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .event-table th {
+            background-color: #cbffff;
+            color: #110202;
+        
+        }
+
+        .event-table tr {
+            transition: background-color 0.3s ease;
+        }
+
+        .event-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .event-table img {
+            width: 100px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul>
+                        <li><a href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="sciencepark.html">Science Park</a></li>
+                <li><a class="active"href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="cyberjaya ec.jfif" alt="Banner Image">
+        <div class="banner-text">Event Calander</div>
+    </div>
+
+    <div class="container">
+        <div class="content-section">
+            <table class="event-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Event Title</th>
+                        <th>Time</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="yogas.jpg" alt="Yoga in the Park"></td>
+                        <td>Yoga in the Park</td>
+                        <td>Sunday, July 7:00 AM - 8:00 AM</td>
+                        <td>Start your Sunday with a refreshing yoga session at Cyberjaya Park.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="night.jpg" alt="Weekly Night Market"></td>
+                        <td>Weekly Night Market</td>
+                        <td>Tuesday, July 6:00 PM - 10:00 PM</td>
+                        <td>A bustling night market with vendors selling a variety of goods, street food, and handmade crafts.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="innovation.jpg" alt="Cyberjaya Innovation Festival"></td>
+                        <td>Cyberjaya Innovation Festival</td>
+                        <td>Wednesday to Friday, July 5-7: All Day</td>
+                        <td>A platform showcasing innovative technology and startups, including workshops, panels, and exhibitions.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="food.jpg" alt="Cyberjaya Food Festival"></td>
+                        <td>Cyberjaya Food Festival</td>
+                        <td>Tuesday to Thursday, July 12-14: All Day</td>
+                        <td>A gastronomic event with food trucks, stalls, and live cooking demonstrations from local and international chefs.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="marathon.jpg" alt="Cyberjaya Marathon"></td>
+                        <td>Cyberjaya Marathon</td>
+                        <td>Saturday, July 21: All Day</td>
+                        <td>A marathon event featuring different categories for various skill levels, promoting health and fitness in the community.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="music.jpg" alt="Cyberjaya Arts and Music Festival"></td>
+                        <td>Cyberjaya Arts and Music Festival</td>
+                        <td>Friday to Sunday, July 27-29: All Day</td>
+                        <td>An event celebrating local arts and music with performances, art installations, and workshops.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="marketplace.jpg" alt="Soft Love Pop-Up Marketplace"></td>
+                        <td>Soft Love Pop-Up Marketplace</td>
+                        <td>Wednesday, July 12: All Day</td>
+                        <td>This event will feature a variety of workshops and a flea market atmosphere, providing a platform for local artisans and vendors to showcase their products.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="hr.jpg" alt="Winning HR Strategies Conference"></td>
+                        <td>Winning HR Strategies Conference</td>
+                        <td>Monday to Tuesday, July 16-17: All Day</td>
+                        <td>This event will be held at the Cyberview Resort and Spa, focusing on effective HR practices and strategies. It is HRDF claimable, making it a valuable opportunity for HR professionals.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

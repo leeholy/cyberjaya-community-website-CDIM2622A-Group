@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback of Tasik Cyberjaya</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       /* General Styles */
+       body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        
+        a {
+            color: #140101;
+            text-decoration: none;
+        }
+
+        /* Header and Navigation Styles */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        form {
+           margin: 50px auto;
+           padding: 30px 30px;
+           max-width: 550px;
+           background-color: whitesmoke;
+           margin: 30px auto;
+           max-width: 1150px;
+
+        }
+        .form-control input,
+        .form-control select,
+        .form-control textarea{
+          padding: 10px;
+          width: 90%;
+        }
+
+        .form-control input[type="radio"]{
+          display: inline-block;
+          width: auto;
+
+        }
+
+        button{
+          display: block;
+          width: 100%;
+          padding: 10px 10px;
+          background-color: #11ffee
+        }
+
+        /* Footer Styles */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul>
+                        <li><a href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="sciencepark.html">Science Park</a></li>
+                <li><a href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a class="active" href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="banner">
+        <img src="cyberjaya feedback.jfif" alt="Banner Image">
+        <div class="banner-text">Feedback for Cyberjaya</div>
+    </div>
+</head>
+<body>
+    <div>
+        <form style="text-align: center;">
+            <center><h1>* Honest Review For Cyberjaya *</h1></center>
+          <fieldset>
+          <div class="form-control">
+          <label style="display: block; margin-bottom: 14px">Name</label>
+          <input type="text" name="Name" placehodler="Enter your name">
+          </div>
+
+          <div class="form-control">
+            <label style="display: block; margin-bottom: 10px">Email</label>
+            <input type="text" name="Name" placehodler="Enter your email">
+            </div>
+          
+            <div class="form-control">
+              <label style="display: block; margin-bottom: 10px">Age</label>
+              <input type="text" name="Name" placehodler="Enter your age">
+              </div>
+            
+            <div class="form-control">
+            <label style="display: block; margin-bottom: 10px">Gender</label>
+            <select>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+            </div>
+
+            <div class="form-control">
+              <label style="display: block; margin-bottom: 10px">Are you satisfied with this place?  </label>
+              <input type="radio" name="choice">Yes
+              <input type="radio" name="choice">No
+              </div>
+
+            <div class="form-control">
+              <label style="display: block; margin-bottom: 10px">How often do you visit lakes?  </label>
+              <input type="radio" name="choice">1-2
+              <input type="radio" name="choice">3-5
+              <input type="radio" name="choice">more than 5
+              </div>
+            
+              <div class="form-control">
+                <label style="display: block; margin-bottom: 10px">What activities do you usually engage in at lakes (e.g., swimming, boating, fishing)?  </label>
+                <textarea placeholder="Enter your answer here"></textarea>
+                </div>
+                
+                  <div class="form-control">
+                    <label style="display: block; margin-bottom: 10px">Any comments or suggestion? </label>
+                    <textarea placeholder="Enter your comment here"></textarea>
+                    </div>
+
+                  <button type="submit">Submit</button>
+        </fieldset>
+
+        </form>
+       
+    </div>
+            <footer class="footer">
+                <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+            </footer>
+</body>
+</html>

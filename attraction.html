@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attraction</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        a {
+            color: #140101;
+            text-decoration: none;
+        }
+
+        /* Header and Navigation Styles */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content-section {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 1150px;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            font-size: 34px;
+            color: #140101;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .content-section img {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight {
+            color: #4FB6EC;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background-color: #4FB6EC;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #3498db;
+        }
+
+        .content-section .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .content-section .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .content-section .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .free-stuff {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .free-stuff .item {
+            text-align: center;
+        }
+
+        .images {
+            width:80%;
+            height: auto;
+        }
+
+       /* Footer Styles */
+       .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul>
+                        <li><a href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a class="active"href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="sciencepark.html">Science Park</a></li>
+                <li><a href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="cyberjaya attraction.jfif" alt="Banner Image">
+        <div class="banner-text">4 Top Attraction In Cyberjaya</div>
+    </div>
+
+    <div class="content-section">
+        <h2>Welcome to Our Attractions</h2>
+        <section class="free-stuff">
+            <div class="item">
+                <img class="images" src="Atamaridsquare.png" alt="Tamarind Square">
+                <p>TAMARIND SQUARE</p>
+            </div>
+            <div class="item">
+                <img class="images" src="Acyberlake.png" alt="Cyberjaya Lake Garden">
+                <p>CYBERJAYA LAKE GARDEN</p>
+            </div>
+            <div class="item">
+                <img class="images" src ="Adpulze.png" alt="D pulze">
+                <p>DPULZE SHOPPING CENTER </p>
+            </div>
+            <div class="item">
+                <img class="images" src="Alorongbelakang.png" alt="Lorong Belakang">
+                <p>LORONG BELAKANG</p>
+            </div>
+            
+            
+        </section>
+        <p>Find the most fascinating Cyberjaya attractions to ensure that your trip is one to remember. Our attractions provide a variety of experiences, from calm walks in the natural environment to thrilling tech-driven parks. Everyone can find something enjoyable!<p>
+            <p>Take in the delicious local food, stroll around the <span class="highlight">futuristic landscape</span>, and learn about the inventive history and culture that make Cyberjaya special. This place has everything you might want, from adventure to relaxation.<p>
+            <p>Don't miss our seasonal highlights and special events, which will add even more excitement to your visit. Plan your ideal vacation today and stay up to speed with our <a href="#">Event Calendar</a> for the most recent events.<p>
+    </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+        </footer>
+</body>
+</html>

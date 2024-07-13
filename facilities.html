@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Our Top-Notch Facilities</title>
+    <style>
+         body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a8b6f;
+        }
+        li, a {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #140101;
+            text-decoration: none;
+            margin: 0;
+        }
+
+         /* Header and Navigation Styles */
+         header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            padding: 10px;
+            transition: background 0.5s ease;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            position: relative;
+            padding: 0 10px;
+        }
+        .nav_links li a {
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+        .nav_links li a:hover, .nav_links li a.active {
+            color: #11ffee;
+        }
+        .nav_links ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a8b6f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            z-index: 100;
+        }
+        .nav_links li:hover ul {
+            display: block;
+        }
+        .nav_links ul li {
+            padding: 10px;
+        }
+
+        /* Banner Styles */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content-section {
+            padding:20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 1150px;
+        }
+
+        .content-section p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        
+        .content-section h2 {
+            text-align: center;
+            font-size: 34px;
+            color: #140101;
+            margin-bottom: 20px;
+        }
+
+        .facility {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .facility img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="webmaster.html">
+            <img src="cyberjaya logo.png" alt="Logo">
+            </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul>
+                        <li><a href="recentnews.html">Recent News</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                    </ul>
+                </li>
+                <li><a href="attraction.html">Attractions</a>
+                    <ul>
+                        <li><a href="tamarind.html">Tamarind Square</a></li>
+                        <li><a href="cyberlake.html">Cyberjaya Lake Garden</a></li>
+                        <li><a href="dpulze.html">Dpulze Shopping Center</a></li>
+                        <li><a href="lorongbelakang.html">Lorong Belakang Cyberjaya</a></li>
+                    </ul>
+                </li>
+                <li><a class="active" href="facilities.html">Facilities</a></li>
+                <li><a href="sciencepark.html">Science Park</a></li>
+                <li><a href="event.html">Event Calendar</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="cyberjaya f.jfif" alt="Banner Image">
+        <div class="banner-text">Explore Our Top-Notch Facilities</div>
+    </div>
+
+    <div class="content-section">
+        
+        <!-- Facility 1 -->
+        <div class="facility" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="sklh.jpg" alt="Sekolah Seri Putri, Cyberjaya" onclick="openModal('modal1')">
+            <div class="facility-content">
+                <h2>Sekolah Seri Puteri, Cyberjaya</h2>
+                <p>Sekolah Seri Puteri (SSP) in Cyberjaya is a prominent full-boarding school for girls situated in Cyberjaya, Selangor, Malaysia. It stands out as one of the well-known Sekolah Berasrama Penuh (SBP) or Fully Residential Schools in the nation, overseen by the Ministry of Education Malaysia.</p>
+                <p>Phone: 03-8319 2414</p>
+                <p>Address: Cyberjaya, 63000 Cyberjaya, Selangor</p>
+                <a href="https://maps.app.goo.gl/JsNZ46DX5ThdM8bh8" style="color: blue;">Click here to go there!</a><br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <!-- Facility 2 -->
+        <div class="facility"  style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="Hospital.jpg" alt="Cyberjaya Hospital" onclick="openModal('modal2')">
+            <div class="facility-content">
+                <h2>Cyberjaya Hospital</h2>
+                <p>As part of the South Selangor Cluster Hospital Programme, Hospital Cyberjaya is a specialised hospital situated in Cyberjaya, Malaysia. It is a member of a wider network of hospitals that includes Hospital Serdang, Hospital Kajang, and Hospital Ampang. It is renowned for offering a variety of specialised medical treatments. The hospital offers cutting-edge medical services and facilities within its specialised domains in an effort to meet the healthcare requirements of the people in Cyberjaya and the neighbouring areas.</p>
+                <p>Hours: Open 24 hours</p>
+                <p>Phone: 03-8873 3500</p>
+                <p>Address: Persiaran Sepang, Cyber 11, 63000 Sepang, Selangor</p>
+                <a href="https://maps.app.goo.gl/qp7HEtvcoNNLwnZz5" style="color: blue;">Click here to go there!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <!-- Facility 3 -->
+        <div class="facility" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="bomba.jpg" alt="Cyberjaya Fire Station" onclick="openModal('modal3')">
+            <div class="facility-content">
+                <h2>Cyberjaya Fire Station</h2>
+                <p>The main fire and rescue services facility for the Cyberjaya area of Malaysia is the Cyberjaya Fire Station, sometimes referred to as Balai Bomba Cyberjaya in Malay. Within its authority, it is responsible for reacting to situations like fires, accidents, and other calamities. The station is staffed by skilled individuals who are equipped to handle a variety of emergency scenarios, as well as rescue vehicles and firefighting equipment.</p>
+                <p>Hours: Open 24 hours</p>
+                <p>Phone: 03-8318 8944</p>
+                <p>Address: Persiaran APEC, 63000 Cyberjaya, Selangor</p>
+                <a href="https://maps.app.goo.gl/s61bLAk3xNJ1yHTL8" style="color: blue;">Click here to go there!</a><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <!-- Facility 4 -->
+        <div class="facility" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="polis.jpg" alt="Cyberjaya Police Department" onclick="openModal('modal4')">
+            <div class="facility-content">
+                <h2>Cyberjaya Police Station</h2>
+                <p>Located in Cyberjaya, Malaysia, is the Cyberjaya Police Department, a law enforcement organisation. Operating under the auspices of the Royal Malaysia Police (PDRM), it is in charge of upholding law and order in Cyberjaya, Malaysia's hub for digital innovation and information technology. Assuring public safety in the Cyberjaya region, preventing crime, conducting investigations, managing traffic, and other standard police force responsibilities are all handled by the department.</p>
+                <p>Hours: Open 24 hours</p>
+                <p>Phone: 03-8318 2222</p>
+                <p>Address: Jalan Cyber Point 5, 63000 Cyberjaya, Sepang, Selangor.</p>
+                <a href="https://maps.app.goo.gl/a2DyqmDpT6rWNCxm7" style="color: blue;">Click here to go there!</a><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <!-- Facility 5 -->
+        <div class="facility" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="masjid.jpg" alt="Cyberjaya Mosque" onclick="openModal('modal5')">
+            <div class="facility-content">
+                <h2>Raja Haji Fi Sabilillah Mosque</h2>
+                <p>The main mosque in Cyberjaya, Sepang, Selangor, Malaysia is called the Raja Haji Fisabilillah Mosque, also known as the Cyberjaya Mosque. Raja Haji Fisabilillah ibni Daeng Chelak, a Bugis warrior from Indonesia's Penyengat Island, is the namesake of this contemporary, futuristic mosque.</p>
+                <p>Hours: Open 24 hours</p>
+                <p>Phone: 03-8322 0096</p>
+                <p>Address: Persiaran Semarak Api, Cyberjaya, 63000 Cyberjaya, Selangor</p>
+                <a href="https://maps.app.goo.gl/VWwGu65iXYJTLhgU7" style="color: blue;">Click here to go there!</a><br>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modals -->
+        <div id="modal1" class="modal">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <img class="modal-content" src="sklh.jpg" alt="Sekolah Seri Putri, Cyberjaya">
+        </div>
+
+        <div id="modal2" class="modal">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <img class="modal-content" src="Hospital.jpg" alt="Cyberjaya Hospital">
+        </div>
+
+        <div id="modal3" class="modal">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <img class="modal-content" src="bomba.jpg" alt="Cyberjaya Fire Station">
+        </div>
+
+
+        <div id="modal4" class="modal">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <img class="modal-content" src="polis.jpg" alt="Cyberjaya Police Station">
+        </div>
+
+        <div id="modal5" class="modal">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <img class="modal-content" src="masjid.jpg" alt="Mosque Cyberjaya">
+        </div>
+
+    </div>
+
+    <script>
+        // Function to open the modal
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+        }
+
+        // Function to close the modal
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+            document.body.style.overflow = ""; // Allow scrolling
+        }
+    </script>
+
+<div class="footer">
+    <p>&copy; 2024 Cyberjaya. All rights reserved.</p>
+</div>
+
+</body>
+</html>
